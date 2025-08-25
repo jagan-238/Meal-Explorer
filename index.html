@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Meal Explorer</h1>
+    <div class="controls">
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search meals...">
+        <ul id="suggestions" class="suggestions hidden"></ul>
+      </div>
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+      </select>
+      <select id="sortBy">
+        <option value="name-asc">Sort by Name: A-Z</option>
+        <option value="name-desc">Sort by Name: Z-A</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+    </div>
+    <div id="mealGrid" class="meal-grid"></div>
+    <div class="pagination">
+      <button id="prevBtn" class="pag-btn">Prev</button>
+      <span id="pageNum">1</span>
+      <button id="nextBtn" class="pag-btn">Next</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
